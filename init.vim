@@ -166,7 +166,7 @@ Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
 set updatetime=300
 
 " don't give |ins-completion-menu| messages.
-set shortmess+=c
+"set shortmess+=c
 
 " Some server have issues with backup files, see #649
 set nobackup
