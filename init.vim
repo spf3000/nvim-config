@@ -19,6 +19,10 @@ setlocal foldmethod=manual
 " autotag plugin to automatically generate ctags file
 Plug 'craigemery/vim-autotag'
 
+" To Install FZF as well
+"Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+"Plug 'junegunn/fzf.vim'
+"
 " FZF / Ctrlp for file navigation
 if executable('fzf')
   Plug '/usr/local/opt/fzf'
