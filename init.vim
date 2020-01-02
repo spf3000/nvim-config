@@ -213,6 +213,10 @@ endfunction
 " Highlight symbol under cursor on CursorHold
 autocmd CursorHold * silent call CocActionAsync('highlight')
 
+"comment highlighting
+autocmd FileType json syntax match Comment +\/\/.\+$+
+
+
 " Remap for rename current word
 nmap <leader>rn <Plug>(coc-rename)
 
@@ -231,8 +235,12 @@ nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
 
 " *************************
 "colorscheme
-Plug 'flazz/vim-colorschemes'
-Plug 'Badacadabra/vim-archery', { 'as': 'archery' }
+"Plug 'flazz/vim-colorschemes'
+Plug 'rafi/awesome-vim-colorschemes'
+Plug 'freeo/vim-kalisi'
+Plug 'pangloss/vim-javascript'
+Plug 'MaxMEllon/vim-jsx-pretty'
+
 call plug#end()
 
 " Always draw sign column. Prevent buffer moving when adding/deleting sign.
@@ -266,13 +274,20 @@ set background=dark
 set t_Co=256
 
 inoremap <A-j> <Esc>:m .+1<CR>==gi
-colorscheme kalisi
+Plug 'cocopon/iceberg.vim'
+"colorscheme myiceberg
+colorscheme OceanicNext
+
+"colorscheme kalisi
+
+"colorscheme firewatch
 
 " clear search highlighting with escape
 nnoremap <silent> <Esc> :let @/=""<CR>
 
 " format json with =j
 nmap =j :%!python -m json.tool<CR>
+
 
 "shortcut to move physical lines Alt-j and Alt-k
 nnoremap <A-j> :m .+1<CR>==
